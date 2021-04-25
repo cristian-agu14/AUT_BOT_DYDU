@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.targets.Target;
 public class TestPage extends PageObject {
 
 	public static final Target BUTTON_FOR_TEST = Target.the("This button is for start the test of the know created")
-			.locatedBy("//button[@class='button button_secondary button_only-icon']");
+			.locatedBy("//button//span[contains(text(),'Test')]//parent::button[1]");
 
 	public static final Target TEXT_FIELD_QUESTION = Target.the("In this text field write the questions for the bot")
 			.locatedBy("//input[@name='userInput']");

@@ -1,6 +1,5 @@
 package tasks;
 
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static uis.HomePage.BUTTON_CREER_UN_BOT;
 import static uis.HomePage.BUTTON_SOCIAL;
 
@@ -13,8 +12,8 @@ public class StartTheCreation implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		theActorInTheSpotlight().attemptsTo(Click.on(BUTTON_SOCIAL));
-		theActorInTheSpotlight().attemptsTo(Click.on(BUTTON_CREER_UN_BOT));
+		actor.attemptsTo(Click.on(BUTTON_SOCIAL));
+		actor.attemptsTo(Click.on(BUTTON_CREER_UN_BOT));
 	}
 
 	public static StartTheCreation ofABot() {

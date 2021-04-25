@@ -4,10 +4,6 @@ import static uis.KnowledgesPage.BUTTON_CARD_ANSWER_QUESTION;
 import static uis.KnowledgesPage.BUTTON_CREATE;
 import static uis.KnowledgesPage.TEXT_FIELD_QUESTION;
 
-import java.util.concurrent.TimeUnit;
-
-import org.slf4j.LoggerFactory;
-
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -34,12 +30,7 @@ public class IntoQuestion implements Task {
 		actor.attemptsTo(Click.on(BUTTON_CREATE));
 		if (BUTTON_CREATE.resolveFor(actor).isPresent()) {
 			actor.attemptsTo(Click.on(BUTTON_CREATE));
-		}
-		try {
-			TimeUnit.SECONDS.sleep(6);
-		} catch (InterruptedException e) {
-			LoggerFactory.getLogger(this.getClass()).error(e.getMessage(), e);
-		}
+		}		
 
 	}
 
