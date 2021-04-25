@@ -1,0 +1,13 @@
+# built application files
+*.txt
+*.xlsx
+# file
+#directory
+.idea/
+target/
+.classpath
+.project
+.settings/
+
+
+
