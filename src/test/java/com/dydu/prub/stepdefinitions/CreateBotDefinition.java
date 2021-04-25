@@ -10,8 +10,8 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static uis.HomePage.ELEMENT_LIST_BOTS;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import static uis.HomePage.BUTTON_SOCIAL;
 
