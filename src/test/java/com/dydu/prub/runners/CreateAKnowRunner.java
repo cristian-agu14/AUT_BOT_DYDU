@@ -9,7 +9,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/features/create_know.feature", 
 glue = "com.dydu.prub.stepdefinitions", tags = {
-		"@create-know-to-bot-created" }, snippets = SnippetType.CAMELCASE)
+		"" }, snippets = SnippetType.CAMELCASE)
 public class CreateAKnowRunner {
 
 }

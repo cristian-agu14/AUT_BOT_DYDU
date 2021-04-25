@@ -1,7 +1,10 @@
 package questions;
 
+import static uis.HomePage.BUTTON_SOCIAL;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class TheTarget implements Question<Boolean> {
@@ -9,7 +12,6 @@ public class TheTarget implements Question<Boolean> {
 	private Target webElement;
 
 	public TheTarget(Target webElement) {
-		super();
 		this.webElement = webElement;
 	}
 
@@ -19,6 +21,7 @@ public class TheTarget implements Question<Boolean> {
 
 	@Override
 	public Boolean answeredBy(Actor actor) {
+		actor.attemptsTo(Click.on(BUTTON_SOCIAL));
 		return webElement.resolveFor(actor).isPresent();
 	}
 

@@ -1,19 +1,15 @@
 package com.dydu.prub.stepdefinitions;
 
 
-import net.serenitybdd.screenplay.actions.Click;
-import questions.TheTarget;
-import tasks.CreateBot;
-import tasks.StartTheCreation;
-
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static uis.HomePage.ELEMENT_LIST_BOTS;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-import static uis.HomePage.BUTTON_SOCIAL;
+import questions.TheTarget;
+import tasks.CreateBot;
+import tasks.StartTheCreation;
 
 public class CreateBotDefinition {
 
@@ -29,7 +25,6 @@ public class CreateBotDefinition {
 
 	@Then("the user can to see the bot created with the name (.*)")
 	public void theUserCanToSeeTheBotCreatedWithThe(String nameBot) {
-		theActorInTheSpotlight().attemptsTo(Click.on(BUTTON_SOCIAL));
 		theActorInTheSpotlight().should(seeThat(TheTarget.isPresent(ELEMENT_LIST_BOTS.of(nameBot))));
 	}
 

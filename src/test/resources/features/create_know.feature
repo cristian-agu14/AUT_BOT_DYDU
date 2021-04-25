@@ -24,8 +24,8 @@ Feature: Create a know for a bot
   Scenario Outline: how user create a Knowledge, I want to create a bot and a Knowledge to this bot
     Given the user sees the homepage
     When the user starts to create the bot
-    When enter <nameBot> and <language> for the user
-    When the user can to see the bot created with the name <nameBot>
+    When enter <botName> and <language> for the user
+    When the user can to see the bot created with the name <botName>
     When the user select a bot created with <nameBot>
     When the user writes a question <question> in the bot select
     When the user configure a answer <answer> for the question created
@@ -34,4 +34,4 @@ Feature: Create a know for a bot
 
     Examples: 
       | nameBot   | language | question                                          | answer                                             |
-      | cristian1 | Spanish  | ¿Cuantas consultas medicas puedo tener en un dia? | Hola, puede agendar hasta 3 citas por día. Saludos |
+      | cristian2 | Spanish  | ¿Cuantas consultas medicas puedo tener en un dia? | Hola, puede agendar hasta 3 citas por día. Saludos |
