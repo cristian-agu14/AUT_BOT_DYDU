@@ -16,4 +16,4 @@ Feature: Create a bot for test this functionality
 
     Examples: 
       | nameBot | language |
-      | botName | Espagnol |
+      | botNew | Espagnol |
