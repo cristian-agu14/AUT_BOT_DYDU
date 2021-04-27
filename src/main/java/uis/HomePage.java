@@ -45,4 +45,7 @@ public class HomePage extends PageObject {
 
 	public static final Target BUTTON_NEW_KNOWLEDGE = Target.the("Sub button new knowledge")
 			.locatedBy("//a//span[contains(text(),'New knowledge')]");
+	
+	public static final Target BUTTON_NEW_KNOWLEDGE_2 = Target.the("Sub button new knowledge")
+			.locatedBy("(//a//span[contains(text(),'New knowledge')])[2]");
 }

@@ -2,6 +2,7 @@ package tasks;
 
 import static uis.HomePage.BUTTON_ADD;
 import static uis.HomePage.BUTTON_NEW_KNOWLEDGE;
+import static uis.HomePage.BUTTON_NEW_KNOWLEDGE_2;
 import static uis.HomePage.BUTTON_SOCIAL;
 import static uis.HomePage.CARD_BUTTON_KNOW;
 import static uis.HomePage.ELEMENT_LIST_BOTS;
@@ -11,6 +12,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.conditions.Check;
 
 public class IntoToCreateKnow implements Task {
 
@@ -33,12 +35,14 @@ public class IntoToCreateKnow implements Task {
 		actor.attemptsTo(Click.on(ELEMENT_LIST_BOTS.of(nameBot)));
 		actor.attemptsTo(Wait.page());
 		actor.attemptsTo(Click.on(CARD_BUTTON_KNOW));
-		
+
 		actor.attemptsTo(Wait.page());
 
 		actor.attemptsTo(Click.on(BUTTON_ADD));
-		actor.attemptsTo(Click.on(BUTTON_NEW_KNOWLEDGE));
-		
+		actor.attemptsTo(Check
+				.whether( BUTTON_NEW_KNOWLEDGE.resolveFor(actor).isVisible())
+				.andIfSo(Click.on(BUTTON_NEW_KNOWLEDGE)).otherwise(Click.on(BUTTON_NEW_KNOWLEDGE_2)));
+		;
 
 	}
 

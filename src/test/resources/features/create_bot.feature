@@ -1,11 +1,10 @@
 #Author: cristian.agu14@gmail.com
 @create-bots
-Feature: Create a bot for test this functionality
+Feature: I need to create a bot for test this functionality
 
   Background: 
     Given the user opens the portal dydupage
     When the user writes the user and password
-    When the user sees the homepage
 
   @create-bot
   Scenario Outline: Feature for test the create bots
@@ -16,4 +15,4 @@ Feature: Create a bot for test this functionality
 
     Examples: 
       | botName | language |
-      | botNew  | Spanish  |
+      | botNew1 | Spanish  |
