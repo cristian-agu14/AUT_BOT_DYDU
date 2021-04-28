@@ -10,6 +10,7 @@ import static uis.KnowledgesPage.TEXT_FIELD_ANSWER;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
+import org.slf4j.LoggerFactory;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -38,17 +39,16 @@ public class IntoQuestion implements Task {
 		actor.attemptsTo(Click.on(TEXT_FIELD_QUESTION));
 		actor.attemptsTo(Enter.theValue(question).into(TEXT_FIELD_QUESTION));
 		actor.attemptsTo(Hit.the(Keys.TAB).into(TEXT_FIELD_QUESTION));
-//		try {
-//			TimeUnit.SECONDS.sleep(1);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
+
+		try {
+			TimeUnit.SECONDS.sleep(10);
+		} catch (InterruptedException e) {
+			LoggerFactory.getLogger(IntoQuestion.class).error("Error in the wait time", e);
+		}
+
 		actor.attemptsTo(Click.on(BUTTON_CREATE));
-//		if (BUTTON_CREATE.resolveFor(actor).isPresent()) {
-//			actor.attemptsTo(Click.on(BUTTON_CREATE));
-//		}		
-		
-		actor.attemptsTo(WaitUntil.the(TEXT_FIELD_ANSWER,isVisible()).forNoMoreThan(60).seconds());
+
+		actor.attemptsTo(WaitUntil.the(TEXT_FIELD_ANSWER, isNotVisible()).forNoMoreThan(60).seconds());
 
 	}
 

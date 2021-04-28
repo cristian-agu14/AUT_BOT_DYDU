@@ -15,4 +15,4 @@ Feature: I need to create a bot for test this functionality
 
     Examples: 
       | botName | language |
-      | botNew1 | Spanish  |
+      | botNew2 | English  |

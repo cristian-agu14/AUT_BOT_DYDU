@@ -1,10 +1,10 @@
 package com.dydu.prub.stepdefinitions;
 
-
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static uis.HomePage.ELEMENT_LIST_BOTS;
 
+import exceptions.MyExcepction;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import questions.TheTarget;
@@ -25,7 +25,8 @@ public class CreateBotDefinition {
 
 	@Then("the user can to see the bot created with the name (.*)")
 	public void theUserCanToSeeTheBotCreatedWithThe(String nameBot) {
-		theActorInTheSpotlight().should(seeThat(TheTarget.isPresent(ELEMENT_LIST_BOTS.of(nameBot))));
+		theActorInTheSpotlight().should(seeThat(TheTarget.isPresent(ELEMENT_LIST_BOTS.of(nameBot)))
+				.orComplainWith(MyExcepction.class, MyExcepction.ERROR_CREATION_BOT));
 	}
 
 }
