@@ -1,15 +1,13 @@
 package tasks;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotVisible;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static uis.KnowledgesPage.BUTTON_CARD_ANSWER_QUESTION;
 import static uis.KnowledgesPage.BUTTON_CREATE;
-import static uis.KnowledgesPage.TEXT_FIELD_QUESTION;
 import static uis.KnowledgesPage.TEXT_FIELD_ANSWER;
+import static uis.KnowledgesPage.TEXT_FIELD_QUESTION;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Keys;
 import org.slf4j.LoggerFactory;
 
 import net.serenitybdd.screenplay.Actor;
@@ -17,7 +15,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Hit;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 public class IntoQuestion implements Task {
@@ -38,7 +35,6 @@ public class IntoQuestion implements Task {
 		actor.attemptsTo(Click.on(BUTTON_CARD_ANSWER_QUESTION));
 		actor.attemptsTo(Click.on(TEXT_FIELD_QUESTION));
 		actor.attemptsTo(Enter.theValue(question).into(TEXT_FIELD_QUESTION));
-		actor.attemptsTo(Hit.the(Keys.TAB).into(TEXT_FIELD_QUESTION));
 
 		try {
 			TimeUnit.SECONDS.sleep(10);

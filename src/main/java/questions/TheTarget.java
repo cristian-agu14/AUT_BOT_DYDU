@@ -5,6 +5,7 @@ import static uis.HomePage.BUTTON_SOCIAL;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.annotations.Subject;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class TheTarget implements Question<Boolean> {
@@ -19,7 +20,7 @@ public class TheTarget implements Question<Boolean> {
 		// It's empty intentionally
 	}
 
-	@Override
+	@Subject("Question for say if the Target is present")
 	public Boolean answeredBy(Actor actor) {
 		actor.attemptsTo(Click.on(BUTTON_SOCIAL));
 		return webElement.resolveFor(actor).isPresent();

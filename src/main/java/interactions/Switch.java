@@ -22,7 +22,9 @@ public class Switch implements Interaction {
 		this.driver = driver;
 	}
 
-	// para cambiarle el foco al driver
+	/**
+	 * For change the focus driver
+	 */
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {

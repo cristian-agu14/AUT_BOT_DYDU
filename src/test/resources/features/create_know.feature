@@ -20,7 +20,7 @@ Feature: Create a know for a bot
 
     Examples: 
       | nameBot   | language | question                                 | answer                               |
-      | cristian3 | English  | How many oranges are in the supermarket? | There are not oranges in this moment |
+      | cristian4 | English  | How many oranges are in the supermarket? | There are not oranges in this moment |
 
   @create-know-to-bot-created
   Scenario Outline: how user I wants to create a Knowledge, I want to create this Knowledge to a bot created
