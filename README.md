@@ -39,12 +39,15 @@ Las urls se cargan desde un archivo .properties localizado en la ruta src/test/r
 
 # Ejecución de la automatización ⚙️
 Para ejecutar la automatización y generar el reporte de las pruebas se debe realizar utilizando el siguiente comando:
-_mvn verify -Duser=xxxxx -Dpassword=yyyyy
+
+* mvn verify -Duser=xxxxx -Dpassword=yyyyy
+
 Por seguridad no se muestran las credenciales para acceder al portal entonces remplace las xxxxxx por el usuario y las yyyyyyy por la contraseña.
 
 Para ejecutar la automatizacion desde un IDE de desarrollo parametrizar las siguientes varibales con su respectiva contraseña:
 * -Duser=xxxxxx 
 * -Dpassword=yyyyyy
+
 Por seguridad no se muestran las credenciales para acceder al portal entonces remplace las xxxxxx por el usuario y las yyyyyyy por la contraseña.
 
 
