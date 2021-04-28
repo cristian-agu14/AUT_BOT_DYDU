@@ -5,7 +5,6 @@ Este artefacto es un proyecto de automatización de pruebas funcionales para cre
 Contenido
 1.	Lista de Features, Escenarios y casos prueba
 2.	Software dependencies
-3.	Pruebas manuales
 3.	Arquitectura de la automatización
 4.	Ejecución de la automatización
 
